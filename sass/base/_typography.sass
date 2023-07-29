@@ -1,0 +1,64 @@
+body
+    font-family: "Roboto", sans-serif
+    font-weight: 400
+    color: $color-gray
+    font-size: 1.6rem
+    letter-spacing: 0.2rem
+    
+    
+.title__first
+    // цвет и text-transform: uppercase ниже 
+    // унаследуют &__main и &__secondary
+    color: $color-white
+    &__main
+        display: block
+        font-size: 5rem
+        font-weight: 500
+        line-height: 6rem
+        letter-spacing: 1rem
+        // так же ниже добавим text-transform: 
+        // uppercase что бы текст в 
+        // любом случае был большим
+        text-transform: uppercase
+        // ну и добавим отступ в 10рх между текстом
+        margin-bottom: 1rem
+
+        // задаем имя и время анимации 
+        // превому тексту через @keyframes
+        animation-name: LeftToRight
+        animation-duration: 2s
+
+        // задает задержку анимации
+        animation-delay: 3s
+        
+        // задает плавное ускорение и остановку
+        animation-timing-function: ease
+
+        // делает элемент не прозрачным и
+        // убирает различные качания анимации
+        backface-visibility: hidden
+        animation-fill-mode: backwards
+    &__secondary
+        display: block
+        font-size: 4rem
+        font-style: normal
+        font-weight: 100
+        line-height: normal
+        letter-spacing: 0.5rem
+        margin-bottom: 6.5rem
+
+        // задаем имя и время анимации 
+        // второму тексту через @keyframes
+        animation-name: RightToLeft
+        animation-duration: 2s
+
+        // задает задержку анимации
+        animation-delay: 3s
+        
+        // задает плавное ускорение и остановку
+        animation-timing-function: ease
+
+        // делает элемент не прозрачным и
+        // убирает различные качания анимации
+        backface-visibility: hidden
+        animation-fill-mode: backwards
