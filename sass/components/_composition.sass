@@ -1,0 +1,33 @@
+.composition
+    position: relative
+    &__photo
+        width: 55%
+        box-shadow: $box-shadow
+        border-radius: .5rem
+        position: absolute
+        z-index: 10
+        transition: all .2s
+        // outline-offset добавляет отступ рамке ниже
+        outline-offset: 1rem 
+        &_n1
+            top: 0
+            left: 2rem
+            z-index: 1
+        &_n2
+            top: 8rem
+            left: 21rem
+            z-index: 2
+        &_n3
+            top: 14rem
+            left: 5rem
+            z-index: 3
+        &:hover
+            //outline добавляет для фото рамку как свойство border
+            outline: .6rem solid $color-brown-light
+            transform: scale(1.2)
+            z-index: 20
+    // свойство ниже уменьшает не задействованные
+    // фото при наведении 
+    &:hover &__photo:not(:hover)
+        transform: scale(.95)
+        
