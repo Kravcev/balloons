@@ -64,12 +64,12 @@ body
         animation-fill-mode: backwards
 
 .title-secondary
-// допустим наш заголовок по
-// каким то причинам блочно-строчный inline-block
-// тогда обернем его в отдельный div
-// и дадим ему класс text-align-center
-// к которому в разделе _utilities зададим 
-// значение text-align-center
+    // допустим наш заголовок по
+    // каким то причинам блочно-строчный inline-block
+    // тогда обернем его в отдельный div
+    // и дадим ему класс text-align-center
+    // к которому в разделе _utilities зададим 
+    // значение text-align-center
     display: inline-block
     font-size: $font-size-paragraph-h2
     letter-spacing: 1rem
@@ -83,6 +83,8 @@ body
     &:hover
         transform: skewY(2deg) skewX(15deg) scale(1.1)
         text-shadow: $shadow-h2
+    &_white
+        color: $color-white
 
 .title-third
     font-size: $font-size-paragraph-h3
