@@ -2,13 +2,13 @@
 // это компонент кнопки  
     
 .btn
-    &:link, &:visited
+    &, &:link, &:visited
         @include style-link($color-gray)
         position: relative        
         padding: 1.5rem 4rem
         background: $color-white
         border-radius: 5rem
-
+        border: none
     // хорошей практикой у программистов
     // считается писать не 0.3 сек, а .3
         transition: all .3s
@@ -16,6 +16,12 @@
     // убирает различные качания анимации
         backface-visibility: hidden
         font-size: 2rem
+        @include respond(tab-land)
+            font-size: 1.8rem
+            padding: 1.5rem 3.5rem
+        @include respond(tab-port)
+            padding: 2rem 5rem
+
     &:hover
         transform: translateY(-.4rem)
         box-shadow: $box-shadow
@@ -47,5 +53,10 @@
         // свойство animation-fill-mode: backwards 
         // позволяет не показывать элемент до начала анимации
         animation-fill-mode: backwards
-
-
+.btn_broun
+    &, &:link, &:visited
+        background-color: $color-brown-light
+        color: $color-white
+    &:hover
+    &::after
+        background-color: $color-brown-dark

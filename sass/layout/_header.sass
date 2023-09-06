@@ -22,7 +22,7 @@
         animation-fill-mode: backwards
     &__box
         position: absolute
-        top: 38%
+        top: 40%
         left: 50%
         // добавим позиционирование 
         // текста по центру 
@@ -32,3 +32,5 @@
         width: 100%
         // и центрируем его text-align: center
         text-align: center
+        @include respond(tab-land)
+            top: 50%
